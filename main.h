@@ -7,10 +7,22 @@
 #include <limits.h>
 #include <unistd.h>
 
+
+
+
+
+
+
 /*******Functions***/
 
-int print_char(va_list test, take_it *take);
-int print_stirng(va_list test, take_it *take);
-int print_percent(va_list, take_it *take);
+/*function print charcters, string,and percentage*/
+
+int print_char(va_list test, char *take);
+int print_stirng(va_list test, char *take);
+int print_percent(va_list, char *take);
+
+
+/* print_prototype */
+int _printf(const char *format, ...);
 
 #endif
