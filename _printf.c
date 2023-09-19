@@ -43,7 +43,7 @@ int _printf(const char *format, ...)
 va_list lonly;
 int FINALLY_YES = 0;
 va_start(lonly, format);
-for (; *format != '\0'; format++)
+while (*format)
 {
 if (*format == '%')
 {
@@ -54,26 +54,25 @@ case 's':
 _case_s(lonly);
 break;
 case '%':{
-_putchar ('%');
-FINALLY_YES++;
+FINALLY_YES += _putchar ('%');
 break;
 case 'c':
 _case_c(lonly);
 FINALLY_YES++;
 break;
 default:
-_putchar('%');
-_putchar(*format);
-FINALLY_YES += 2;
+FINALLY_YES += _putchar('%');
+FINALLY_YES += _putchar(*format);
 break;
 }
 }
 }
 else
 {
-_putchar(*format);
-FINALLY_YES++;
+FINALLY_YES += _putchar(*format);
 }
+format++;
+
 }
 va_end(lonly);
 return (FINALLY_YES);
