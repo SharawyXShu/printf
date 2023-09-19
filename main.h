@@ -10,7 +10,7 @@
 
 int _printf(const char *format, ...);
 int _putchar (char CHraCTer);
-void _case_c(va_list lonly);
-void _case_s(va_list lonly);
+int _case_c(va_list lonly);
+int _case_s(va_list lonly);
 
 #endif

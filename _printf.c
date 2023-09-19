@@ -15,10 +15,9 @@ return (write(1, &CHraCTer, 1));
  *Return: no return____
  */
 
-void _case_c(va_list lonly)
+int  _case_c(va_list lonly)
 {
-char CC = (char)va_arg(lonly, int);
-_putchar(CC);
+return (_putchar(va_arg(lonly, int)));
 }
 
 /**
@@ -26,11 +25,18 @@ _putchar(CC);
  *@lonly:argument________
  *Return: no return___
  */
-void _case_s(va_list lonly)
+int _case_s(va_list lonly)
 {
+int FINALLY_YES = 0;
 char *STRing = va_arg(lonly, char *);
-while (STRing && *STRing)
-_putchar(*STRing++);
+if (STRing == NULL)
+STRing = "(null)";
+while (*STRing)
+{
+FINALLY_YES += _putchar(*STRing);
+STRing++;
+}
+return (FINALLY_YES);
 }
 
 /**
@@ -50,15 +56,14 @@ if (*format == '%')
 format++;
 switch (*format)
 {
+case 'c':
+FINALLY_YES += _case_c(lonly);
+break;
 case 's':
-_case_s(lonly);
+FINALLY_YES +=  _case_s(lonly);
 break;
 case '%':{
 FINALLY_YES += _putchar ('%');
-break;
-case 'c':
-_case_c(lonly);
-FINALLY_YES++;
 break;
 default:
 FINALLY_YES += _putchar('%');
