@@ -62,6 +62,9 @@ _case_c(lonly);
 FINALLY_YES++;
 break;
 default:
+_putchar('%');
+_putchar(*format);
+FINALLY_YES += 2;
 break;
 }
 }
