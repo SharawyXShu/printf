@@ -1,20 +1,17 @@
 #include "main.h"
-
 /**
  *_putchar - a fanction prints characters________
  *@CHraCTer: input character________
  *Return: return CHraCTer_____
  */
-
 int _putchar (char CHraCTer)
 {
-return (write(1,&CHraCTer,1));
+return (write(1, &CHraCTer, 1));
 }
-/**                                                                                                                                                                                                               
- *_printf - a fanction that output characters____________                                                                                                                                                         
- *Return: return the total of number of characters printed_______                                                                                                                                                 
+/**
+ *_printf - a fanction that output characters____________
+ *Return: return the total of number of characters printed_______
  */
-
 int _printf(const char *format, ...)
 {
 va_list lonly;
@@ -57,6 +54,6 @@ _putchar(*format);
 FINALLY_YES++;
 }
 }
-va_end (lonly);
+va_end(lonly);
 return (FINALLY_YES);
 }
