@@ -7,7 +7,7 @@
 #include <limits.h>
 #include <unistd.h>
 
-
+#define UNUSED(x)
 
 
 /*******Functions***/
@@ -16,7 +16,8 @@
 
 int print_char(va_list test, char *take);
 int print_stirng(va_list test, char *take);
-int print_percent(va_list, char *take);
+int print_percent(va_list test, char buffer[],
+		int flags, int width, int precision, int size);
 
 
 /* print_prototype */
