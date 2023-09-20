@@ -11,8 +11,14 @@ int case_1(va_list lonly, char *buffer, int boxs)
 buffer[boxs] = (char)va_arg(lonly, int);
 return (boxs + 1);
 }
-
-void _buffer(char *buffer, int boxs)
+/**                                                                               
+ * case_1 - do handles CHraCTer ________                                          
+ *@buffer: the buffer (local) __________                                          
+ *@lonly: the argument (created)__________                                        
+ *@boxs: the current in buffer_______                                             
+ *Return: return (boxs + 1) ________                     
+ */
+oid _buffer(char *buffer, int boxs)
 {
 write(1, buffer, boxs);
 }
