@@ -49,7 +49,7 @@ int _printf(const char *format, ...)
 va_list lonly;
 int FINALLY_YES = 0;
 va_start(lonly, format);
-while (*format)
+while (format && *format)
 {
 if (*format == '%')
 {
