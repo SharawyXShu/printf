@@ -1,14 +1,10 @@
 #include "main.h"
 
-
-
 /**
  *_print_string - a functin prints like ('%s)______
  *@star : string input _____
  *Return: return total characters and print it _______
  */
-
-
 
 int _print_string(char *star)
 {
