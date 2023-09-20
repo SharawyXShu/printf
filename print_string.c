@@ -1,14 +1,7 @@
 #include "main.h"
-/**
- * _putchar - a function prints characters _________
- *@CHraCTer : input character ________
- *Return: return (CHraCTer) __________
- */
-int _putchar (char CHraCTer)
 
-{
-return (write(1, &CHraCTer, 1));
-}
+
+
 /**
  *_print_string - a functin prints like ('%s)______
  *@star : string input _____

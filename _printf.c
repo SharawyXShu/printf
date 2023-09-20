@@ -1,13 +1,4 @@
 #include "main.h"
-/**
- *_putchar - a fanction prints characters________
- *@CHraCTer: input character________
- *Return: return CHraCTer_____
- */
-int _putchar (char CHraCTer)
-{
-return (write(1, &CHraCTer, 1));
-}
 
 /**
  *_case_c - a fanction that test  characters______
