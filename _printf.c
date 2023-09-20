@@ -39,9 +39,9 @@ int _printf(const char *format, ...)
 {
 va_list lonly;
 int FINALLY_YES = 0;
-va_start(lonly, format);
 if (format == NULL)
-return (-1);
+return (0);
+va_start(lonly, format);
 while (*format)
 {
 if (*format == '%')
