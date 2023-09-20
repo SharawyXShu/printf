@@ -21,11 +21,15 @@ if ((*star < 32) || (*star >= 127))
 {
 FINALLY_YES += _putchar('\\');
 FINALLY_YES += _putchar('x');
+if ((*star / 16) < 10)
 FINALLY_YES += _putchar((*star / 16) + '0');
-if ((*star % 16) < '0')
-FINALLY_YES += _putchar((*star % 16) + 10);
+else
+FINALLY_YES += _putchar((*star / 16) - 10 + 'A');
+if ((*star % 16) < 10)
+FINALLY_YES += _putchar((*star % 16) + '0');
 else
 FINALLY_YES += _putchar((*star % 16) - 10 + 'A');
+
 }
 else
 {
