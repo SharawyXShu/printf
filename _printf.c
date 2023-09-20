@@ -40,7 +40,7 @@ int _printf(const char *format, ...)
 va_list lonly;
 int FINALLY_YES = 0;
 if (format == NULL)
-return (0);
+return (-1);
 va_start(lonly, format);
 while (*format)
 {
