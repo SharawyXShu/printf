@@ -41,8 +41,8 @@ va_list lonly;
 int FINALLY_YES = 0;
 va_start(lonly, format);
 if (format == NULL)
-return (0);
-while (format && *format)
+return (-1);
+while (*format)
 {
 if (*format == '%')
 {
