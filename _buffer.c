@@ -8,15 +8,15 @@ return(boxs + 1);
 
 void _buffer(char *buffer , int boxs)
 {
-write(1, &buffer, boxs);
+write(1, buffer, boxs);
 }
 int case_2(va_list lonly, char *buffer, int boxs)
 {
-  int frist_n = 0;
+int frist_n = 0;
 char *star = va_arg(lonly, char *);
- if(star == NULL)
-   star = "(null)";
- while ((star[frist_n] != '\0') && (boxs < (BUFFER_SIZE - 1)))
+if(star == NULL)
+star = "(null)";
+while ((star[frist_n] != '\0') && (boxs < (BUFFER_SIZE - 1)))
 {
 buffer[boxs] = star[frist_n];
 boxs++;
@@ -40,10 +40,10 @@ mat++;
 switch (*mat)
 {
 case 'c':
-boxs = case_1( lonly,buffer, boxs);
+boxs = case_1(lonly,buffer, boxs);
 break;
 case 's':
-boxs = case_2( lonly,buffer, boxs);
+boxs = case_2(lonly,buffer, boxs);
 break;
 case '%':
 buffer[boxs] = '%';
