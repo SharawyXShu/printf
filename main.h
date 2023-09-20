@@ -16,6 +16,9 @@ int _printf(const char *format, ...);
 int _case_c(va_list lonly);
 int _case_s(va_list lonly);
 int _print_string(char *star);
+int case_1(va_list lonly, char *buffer, int boxs);
+void _buffer(char *buffer , int boxs);
 
-
+int case_2(va_list lonly, char *buffer, int boxs);
+int _printf_buffer(const char *mat, ...);
 #endif
