@@ -19,8 +19,10 @@ while (*star)
 {
 if ((*star < 32) || (*star >= 127))
 {
-FINALLY_YES += _putchar ('\\');
-FINALLY_YES += _putchar ('x');
+FINALLY_YES += _putchar('\\');
+FINALLY_YES += _putchar('x');
+FINALLY_YES += _putchar((*star / 16) + '0');
+FINALLY_YES += _putchar((*star % 16) < 10 ? (*star % 16) + '0' :(*star % 16)- 10 + 'A'); 
 }
 else
 {
