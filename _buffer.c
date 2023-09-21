@@ -36,7 +36,7 @@ va_list lonly;
 char buffer[BUFFER_SIZE];
 int FINALLY_YES = 0, boxs = 0;
 if (mat == NULL)
-return (0);
+return (-1);
 va_start(lonly, mat);
 while (*mat)
 {
