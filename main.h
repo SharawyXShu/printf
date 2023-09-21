@@ -24,4 +24,6 @@ int case_1(va_list lonly, char *buffer, int boxs);
 void _buffer(char *buffer , int boxs);
 int case_2(va_list lonly, char *buffer, int boxs);
 int _printf_buffer(const char *mat, ...);
+void  _print_int(const char *mat, ...);
+
 #endif
