@@ -27,4 +27,5 @@ int _printf_buffer(const char *mat, ...);
 
 int green(int so);
 int print_int(const char *mat, ...);
+int _HELP_ME(unsigned char CHARACTER);
 #endif
