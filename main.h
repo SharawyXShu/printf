@@ -3,8 +3,13 @@
 
 
 
+<<<<<<< HEAD
 #define BUFFER_SIZE 1024
+=======
 
+>>>>>>> c1a23eaae3254933dd31af89a89637d395b9bbd8
+
+#define BUFFER_SIZE 1024
 
 
 #include <stdio.h>
@@ -28,4 +33,5 @@ int _printf_buffer(const char *mat, ...);
 int green(int so);
 int print_int(const char *mat, ...);
 int _HELP_ME(unsigned char CHARACTER);
+
 #endif
