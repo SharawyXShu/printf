@@ -3,11 +3,6 @@
 
 
 
-<<<<<<< HEAD
-#define BUFFER_SIZE 1024
-=======
-
->>>>>>> c1a23eaae3254933dd31af89a89637d395b9bbd8
 
 #define BUFFER_SIZE 1024
 
