@@ -8,15 +8,17 @@ int green(int so)
 {
 int totally = 0;
 unsigned int sox;
-if (so == 0)
+if (so == INT_MIN)
 {
-totally += _putchar('0');
-return (totally);
+totally += _putchar('-');
+sox = (unsigned int)INT_MAX + 1;
+totally++;
 }
 else if (so < 0)
 {
 totally += _putchar('-');
 sox = -so;
+totally++;
 }
 else
 {
