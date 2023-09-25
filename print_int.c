@@ -8,18 +8,15 @@ int green(int so)
 {
 int totally = 0;
 unsigned int sox;
-if (so == INT_MIN)
-{
-totally += _putchar('-');
-sox = INT_MAX + 1U;
-}
-else if (so < 0)
+if (so < 0)
 {
 totally += _putchar('-');
 sox = -so;
 }
 else
+{
 sox = so;
+}
 if (sox / 10)
 totally += green(sox / 10);
 totally += _putchar('0' + (sox % 10));
@@ -33,7 +30,7 @@ return (totally);
 int print_int(const char *mat, ...)
 {
 va_list lonly;
-int finally = 0;
+int totally = 0;
 va_start(lonly, mat);
 while (*mat)
 {
@@ -44,22 +41,20 @@ switch (*mat)
 {
 case 'd':
 case 'i':
-{
-finally += green(va_arg(lonly, int));
+totally += green(va_arg(lonly, int));
 break;
-}
 default:
-finally += _putchar('%');
-finally += _putchar(*mat);
+totally += _putchar('%');
+totally += _putchar(*mat);
 break;
 }
 }
 else
 {
-finally +=  _putchar(*mat);
+totally += _putchar(*mat);
 }
 mat++;
 }
 va_end(lonly);
-return (finally);
+return (totally);
 }
