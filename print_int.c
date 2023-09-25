@@ -8,7 +8,12 @@ int green(int so)
 {
 int totally = 0;
 unsigned int sox;
-if (so < 0)
+if (so == INT_MIN)
+{
+totally += _putchar('-');
+sox = (unsigned int)INT_MAX + 1;
+}
+else if (so < 0)
 {
 totally += _putchar('-');
 sox = -so;
