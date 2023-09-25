@@ -8,10 +8,10 @@ int green(int so)
 {
 int totally = 0;
 unsigned int sox;
-if (so == INT_MIN)
+if (so == 0)
 {
-totally += _putchar('-');
-sox = (unsigned int)INT_MAX + 1;
+totally += _putchar('0');
+return (totally);
 }
 else if (so < 0)
 {
