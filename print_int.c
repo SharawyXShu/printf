@@ -8,6 +8,11 @@ int green(int so)
 {
 int totally = 0;
 unsigned int sox;
+if (so == 0)
+{
+totally += _putchar('0');
+return (totally);
+}
 if (so == INT_MIN)
 {
 totally += _putchar('-');
